@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <script>
+
+      
+      function caixa()
+  {
+  var caractere = document.getElementById("caracter").value;
+  var qtde = parseInt(document.getElementById("num").value);
+
+
+  var mensagem = "";
+  for(var i=0; i<qtde; ++i)
+  {
+    mensagem += caractere;
+  }
+  
+  document.write("<table border='1'><tr><td>" + mensagem + "</td></tr></table>");
+  }
+
+    </script>
+    
+</head>
+<body>
+<form>
+Caractere:<input type="text" name="caracter" id="caracter"><br>
+Número:<input type="text" name="num" id="num"><br>
+
+
+<input type="button" name="box" id="box" value="Play" onClick="javascript:caixa()"><br>
+
+</form>
+
+</body>
+</html>

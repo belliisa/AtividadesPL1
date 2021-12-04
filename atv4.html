@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <script>
+
+    
+ function pali()
+  {
+  var mensagem = document.getElementById("palavra").value;
+
+  var tirarespcao = "";
+  for(var i=0; i<mensagem.length; ++i)
+  {
+    if (mensagem.charAt(i)!=" ")
+    {
+      tirarespcao += mensagem.charAt(i);
+    }
+  }
+
+  var invertida = "";
+  for(i=tirarespcao.length-1; i>=0; --i)
+  {
+    invertida += tirarespcao.charAt(i);
+  }
+
+  document.write("<table border='1'>");
+  document.write("<tr><td>" + tirarespcao + "</td></tr>");
+  document.write("<tr><td>" + invertida + "</td></tr>");
+  document.write("<tr><td>" + (tirarespcao==invertida?"Palindromo":"Não é um palindromo") + "</td></tr>");
+  document.write("</table>");
+  }
+
+    </script>
+    
+</head>
+<body>
+<form>
+Palavra:<input type="text" name="palavra" id="palavra"><br>
+
+
+<input type="button" name="box" id="box" value="Play" onClick="javascript:pali()"><br>
+
+</form>
+
+</body>
+</html>

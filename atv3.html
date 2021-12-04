@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <script>
+
+      
+  function info()
+  {
+  var pal = document.getElementById("palavra").value;
+
+  var vogais = 0;
+  var consoa = 0;
+  var digitos = 0;
+  var outros = 0;
+  
+  for(var i=0; i< pal.length; ++i)
+  {
+    if ((pal.charAt(i).toUpperCase()=="A") || pal.charAt(i).toUpperCase()=="E" ||
+        pal.charAt(i).toUpperCase()=="I" || pal.charAt(i).toUpperCase()=="O" ||
+        pal.charAt(i).toUpperCase()=="U")
+        {
+          vogais++;
+        }
+    else
+       if (pal.charCodeAt(i)>=65 && pal.charCodeAt(i)<=90 || 
+           pal.charCodeAt(i)>=97 && pal.charCodeAt(i)<=122)
+           {
+             consoa++;
+           }
+        else
+           if (pal.charCodeAt(i)>=48 && pal.charCodeAt(i)<=57)
+              {
+                digitos++;
+              }  
+           else
+              {
+                outros++;
+              }
+  
+  }
+
+  document.write("<table border='1'>");
+  document.write("<tr><td>Quantidade de vogais:</td><td>" + vogais + "</td></tr>");
+  document.write("<tr><td>Quantidade de consoantes:</td><td>" + consoa + "</td></tr>");
+  document.write("<tr><td>Quantidade de digitos:</td><td>" + digitos + "</td></tr>");
+  document.write("<tr><td>Quantidade de outros caracteres:</td><td>" + outros + "</td></tr>");
+  document.write("</table>");
+  }
+    </script>
+    
+</head>
+<body>
+<form>
+Palavra:<input type="text" name="palavra" id="palavra"><br>
+
+
+<input type="button" name="box" id="box" value="Play" onClick="javascript:info()"><br>
+
+</form>
+
+</body>
+</html>
